@@ -8,7 +8,6 @@ const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
         </div>
         <div class="movie">
           <p class="movie__name">${movie.name}</p>
-          <p class="movie__lan">${movie.language}</p>
           <p class="movie__rating">Rating: ${movie.rating.average}</p>
           <button class="view-more btn">Comments</button>
           <button class="view-more btn">Reservation</button>

@@ -70,18 +70,16 @@
 #header {
   background-image: url(./img/hero-MOVIE-app.webp);
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header-content {
   padding: 2.5rem 0;
 }
 
-.movie__lan {
-  padding: 10px 0;
-}
-
 .movie__rating {
-  padding: 0 0 10px 0;
+  padding: 10px 0;
 }
 
 .header-content__title {
