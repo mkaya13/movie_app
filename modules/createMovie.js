@@ -1,6 +1,6 @@
 const moviesContainer = document.getElementById('movie-container');
 
-export const displayMovie = ((movies) => movies.slice(0, 21).forEach((movie) => {
+export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
   const content = `
       <div class="cards">
           <div class="one">
