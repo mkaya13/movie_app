@@ -55,6 +55,89 @@
   gap: 30px;
 }
 
+.popup-section {
+  padding: 0;
+  margin: 0;
+}
+
+.modal-dialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-first-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.popup-second-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem 3rem;
+}
+
+.popup-image {
+  height: 25rem;
+  width: 60%;
+}
+
+.popup-feature {
+  font-size: 22px;
+}
+
+.popup-feature-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.popup-feature-header {
+  font-size: 20px;
+}
+
+.popup-third-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.2rem 0;
+}
+
+.movie-summary {
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  text-align: center;
+}
+
+.popup-forth-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem 0;
+}
+
+/* desktop version */
+@media screen and (min-width: 768px) {
+  .span-feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 40%;
+    height: 5rem;
+  }
+}
+
 /* mobile version */
 @media screen and (max-width: 768px) {
   .nav-list {
@@ -64,5 +147,23 @@
   .material-symbols-outlined {
     display: block;
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  }
+
+  .popup-second-section {
+  }
+
+  .popup-second-section {
+    gap: 0.5rem 3rem;
+  }
+
+  .popup-image {
+    height: 15rem;
+  }
+
+  .span-feature {
+    display: flex;
+    align-content: center;
+    width: 35%;
+    height: 5rem;
   }
 }

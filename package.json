@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "start": "webpack serve --config webpack.dev.js",
+    "start": "WATCHPACK_POLLING=true webpack serve --config webpack.dev.js",
     "build": "webpack build --config webpack.prod.js",
     "test": "jest"
     

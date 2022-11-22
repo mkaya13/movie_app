@@ -1,4 +1,4 @@
-import displayMovie from './createMovie.js';
+import { displayMovie } from './createMovie.js';
 import { getMovies } from './getMovies.js';
 
 export const show = async () => {
@@ -6,4 +6,4 @@ export const show = async () => {
   displayMovie(movies);
 };
 
-export default show;
+export default { show };
