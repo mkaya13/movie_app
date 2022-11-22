@@ -43,8 +43,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 50rem;
+  height: 50px;
+  margin-top: 30px;
+  padding: 35px;
+  background-color: rgb(228, 228, 228);
 }
 
 .card {
@@ -56,6 +58,12 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  gap: 3px;
+}
+
+.one img {
+  width: 250px;
+  padding-bottom: 10px;
 }
 
 #header {
@@ -64,6 +72,14 @@
 
 .header-content {
   padding: 2.5rem 0;
+}
+
+.movie__lan {
+  padding: 10px 0;
+}
+
+.movie__rating {
+  padding: 0 0 10px 0;
 }
 
 .header-content__title {
@@ -90,6 +106,11 @@
 .btn {
   border: none;
   padding: 10px 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 1px solid;
 }
 
 .btn-primary {

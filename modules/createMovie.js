@@ -1,6 +1,6 @@
 const moviesContainer = document.getElementById('movie-container');
 
-const displayMovie = ((movies) => movies.forEach((movie) => {
+const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
   const content = `
       <div class="card">
           <div class="one">
@@ -10,9 +10,8 @@ const displayMovie = ((movies) => movies.forEach((movie) => {
           <p class="movie__name">${movie.name}</p>
           <p class="movie__lan">${movie.language}</p>
           <p class="movie__rating">Rating: ${movie.rating.average}</p>
-          <button class="view-more ">Comments</button>
-          
-          <button class="view-more">Reservation</button>
+          <button class="view-more btn">Comments</button>
+          <button class="view-more btn">Reservation</button>
         </div>
       </div>
 `;
