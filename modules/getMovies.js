@@ -6,4 +6,4 @@ export const getMovies = async () => {
   return movies;
 };
 
-export default getMovies;
+export default { getMovies };
