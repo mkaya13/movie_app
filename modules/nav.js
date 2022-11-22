@@ -28,7 +28,6 @@ export const showComponent = (componentId) => {
 navItems.forEach((navItem) => {
   navItem.addEventListener('click', (event) => {
     const componentId = event.target.getAttribute('showComponent');
-    console.log(componentId);
     showComponent(componentId);
   });
 });

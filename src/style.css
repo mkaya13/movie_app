@@ -19,7 +19,7 @@
   gap: 5rem;
 }
 
-.logo p{
+.logo p {
   color: orange;
   cursor: pointer;
   font-size: 28px;
@@ -88,14 +88,15 @@
 }
 
 .btn {
-    border: none;
-    padding: 10px 15px;
+  border: none;
+  padding: 10px 15px;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: #fff;
 }
-.btn-secondary{
+
+.btn-secondary {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
