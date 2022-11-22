@@ -7,12 +7,12 @@ const displayMovie = ((movies) => movies.forEach((movie) => {
           <img src="${movie.image.medium}" alt="">
         </div>
         <div class="movie">
-        <p>${movie.name}</p>
-          <p>${movie.language}</p>
-          <p>${movie.genres}</p>
-          <p><a href="${movie.officialSite}">View Live</a></p>
-        <p>${movie}</p>
-        <button class="view-more">Comments</button>
+          <p class="movie__name">${movie.name}</p>
+          <p class="movie__lan">${movie.language}</p>
+          <p class="movie__rating">Rating: ${movie.rating.average}</p>
+          <button class="view-more ">Comments</button>
+          
+          <button class="view-more">Reservation</button>
         </div>
       </div>
 `;
