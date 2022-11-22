@@ -9,28 +9,44 @@
 
 </head>
 <body>
-  <header>
+  <header id="header">
     <nav class="wrapper nav">
       <span class="material-symbols-outlined">
         Menu
       </span>
       <div class="logo">
-        <span>Amazing movies</span>
+        <p>Amazing movies</p>
       </div>
       <ul class="nav-list">
-        <li class="nav-items">Movie shows</li>
-        <li class="nav-items">Countries</li>
-        <li class="nav-items">Contacts</li>
+        <li class="nav-items" showComponent="movie-section">Movie shows</li>
+        <li class="nav-items" showComponent="episode-section">Episodes</li>
+        <li class="nav-items" showComponent="contact-section">Contacts</li>
       </ul>
     </nav>
+    <div class="header-content wrapper">
+      <h1 class="header-content__title">All Your Streaming Services <span class="header-content__title-small">in One Place</span></h1>
+      <p class="header-content__desc">Your Streaming Movie & TV Guide. Track, discover and find where to watch TV shows and movies from Netflix, Amazon Prime, Hulu, Showtime and over 100 more services.</p>
+      <button class="btn btn-primary">How it works</button>
+      <button class="btn btn-secondary">Join Now</button>
+    </div>
   </header>
 
   <main>
-
-
+    <section id="movie-section" class="movie-section visible">
+      <div id="movie-container" class="container wrapper">
+      <!-- movies rendered dynamically -->
+      </div>
+    </section>
+    <section id="episode-section">
+      <h1>Episode</h1>
+    </section>
+    <section id="contact-section">
+      <h1>Contact</h1>
+      
+    </section>
   </main>
 
-  <footer class="wrapper footer">
+  <footer class="footer">
     <p>Created by Microverse under CC license</p>
   </footer>
 </body>
