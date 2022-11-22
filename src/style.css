@@ -69,6 +69,7 @@
 
 #header {
   background-image: url(./img/hero-MOVIE-app.webp);
+  background-position: center;
 }
 
 .header-content {
@@ -100,7 +101,7 @@
 
 .header-content__desc {
   color: #fff;
-  padding: 2rem 0;
+  padding: 2rem 17rem 2rem 0;
   line-height: 1.3;
 }
 
@@ -152,4 +153,21 @@
     display: block;
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
   }
+
+  .header-content__title {
+    font-size: 11vw;
+    font-weight: 800;
+    line-height: 120%;
+}
+
+.header-content__title-small {
+  font-size: 4.9vw;
+  line-height: 3;
+  letter-spacing: 0.3rem;
+}
+
+.header-content__desc {
+  padding: 1rem 0;
+  line-height: 1.3;
+}
 }
