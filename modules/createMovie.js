@@ -1,17 +1,16 @@
 const moviesContainer = document.getElementById('movie-container');
 
-export const displayMovie = (movies) => movies.forEach((movie) => {
+const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
   const content = `
       <div class="card">
           <div class="one">
           <img src="${movie.image.medium}" alt="">
         </div>
         <div class="movie">
-          <p>${movie.name}</p>
-          <p>${movie.language}</p>
-          <p>${movie.genres}</p>
+          <p class="movie__name">${movie.name}</p>
+          <p class="movie__rating">Rating: ${movie.rating.average}</p>
+          <button class="view-more btn">Reservation</button>
           <p><a href="${movie.officialSite}">View Live</a></p>
-          <p>${movie}</p>
 
           <div class="popup-section container-md">
           <button class="view-more" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> See Project </button>
@@ -57,7 +56,6 @@ export const displayMovie = (movies) => movies.forEach((movie) => {
               <div>
             </div>
           </div>
-
         </div>
       </div>
 `;
