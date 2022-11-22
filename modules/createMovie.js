@@ -1,19 +1,17 @@
 const moviesContainer = document.getElementById('movie-container');
 
-const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
+export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
   const content = `
-      <div class="card">
+      <div class="cards">
           <div class="one">
           <img src="${movie.image.medium}" alt="">
         </div>
         <div class="movie">
           <p class="movie__name">${movie.name}</p>
           <p class="movie__rating">Rating: ${movie.rating.average}</p>
-          <button class="view-more btn">Reservation</button>
-          <p><a href="${movie.officialSite}">View Live</a></p>
 
           <div class="popup-section container-md">
-          <button class="view-more" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> See Project </button>
+          <button class="view-more button" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> See Project </button>
             <div class="modal" id="myModal-${movie.id}">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -61,6 +59,6 @@ const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
 `;
 
   moviesContainer.insertAdjacentHTML('beforeend', content);
-});
-
+})
+);
 export default { displayMovie };
