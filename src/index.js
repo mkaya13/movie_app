@@ -1,5 +1,6 @@
+import { getMovies } from '../modules/getMovies.js';
+import { show } from '../modules/movies.js';
 import './style.css';
 
-const API = document.querySelector('.api-endpoint');
-
-API.innerHTML = process.env.API;
+getMovies();
+show();
