@@ -12,13 +12,13 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
           <p><a href="${movie.officialSite}">View Live</a></p>
 
           <div class="popup-section container-md">
-          <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details(Comments) </button>
+          <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details and Comments </button>
             <div class="modal" id="myModal-${movie.id}">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                   <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
                   </div>
 
                   <div class="popup-first-section modal-header">
