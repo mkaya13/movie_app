@@ -12,7 +12,7 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
           <p><a href="${movie.officialSite}">View Live</a></p>
 
           <div class="popup-section container-md">
-          <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details </button>
+          <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details(Comments) </button>
             <div class="modal" id="myModal-${movie.id}">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -47,7 +47,10 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
                   </div>
 
                   <div class="popup-forth-section modal-header">
-                    <h2> Comments </h2>
+                    <div class="comments-title">
+                      <h2> Comments </h2>
+                      <span class="comment-count-${movie.id}">(0)</span>
+                    </div>
                     <div class="get-comments-tag-${movie.id}">
                     </div>
                   </div>

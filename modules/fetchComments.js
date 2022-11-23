@@ -24,6 +24,9 @@ export const populateComments = (comments, itemId) => {
   getCommentsTag.appendChild(listItems);
   console.log(listItems);
   console.log('did it!');
+  console.log('Comments count:', comments.length);
+  const commentTag = document.querySelector(`.comment-count-${itemId}`);
+  commentTag.innerHTML = `(${comments.length})`;
 };
 
 export default { fetchComments, populateComments };

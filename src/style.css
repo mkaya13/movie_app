@@ -28,8 +28,15 @@ p {
   color: orange;
   cursor: pointer;
   font-size: 28px;
-  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff,
-    1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  text-shadow:
+    1px 0 0 #fff,
+    -1px 0 0 #fff,
+    0 1px 0 #fff,
+    0 -1px 0 #fff,
+    1px 1px #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff;
 }
 
 .nav-items {
@@ -275,6 +282,10 @@ p {
   gap: 0.25rem 0;
 }
 
+.comments-title {
+  display: flex;
+}
+
 /* desktop version */
 @media screen and (min-width: 768px) {
   .span-feature {
@@ -300,9 +311,6 @@ p {
   }
 
   .popup-second-section {
-  }
-
-  .popup-second-section {
     gap: 0.5rem 3rem;
   }
 
@@ -316,6 +324,7 @@ p {
     width: 35%;
     height: 5rem;
   }
+
   .header-content__title {
     font-size: 11vw;
     font-weight: 800;
