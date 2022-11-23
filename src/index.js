@@ -1,6 +1,8 @@
 import { getMovies } from '../modules/getMovies.js';
 import { show } from '../modules/movies.js';
 import { showComponent } from '../modules/nav.js';
+import { fetchComments, populateComments } from '../modules/fetchComments.js';
+// import { refreshButton } from '../modules/utils.js';
 import './style.css';
 
 const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
@@ -13,7 +15,7 @@ let itemId = '';
 
 const grabId = async () => {
   document.querySelectorAll('.add-comments').forEach((button) => {
-    button.addEventListener('submit', (e) => {
+    button.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       itemId = button.id;
@@ -24,7 +26,7 @@ const grabId = async () => {
         `apps/${COMMENTS_ENDPOINT_ID}/comments`,
       );
 
-      fetch(APIEndpoint, {
+      await fetch(APIEndpoint, {
         method: 'POST',
         body: JSON.stringify({
           item_id: itemId,
@@ -40,6 +42,15 @@ const grabId = async () => {
 
       inputNameTag.value = '';
       inputCommentsTag.value = '';
+
+      const API_PATH = BASE_COMMENTS_API.concat(
+        `apps/${COMMENTS_ENDPOINT_ID}/comments?item_id=${itemId}`,
+      );
+      const comments = await fetchComments(API_PATH);
+      console.log(comments);
+      console.log(itemId);
+
+      populateComments(comments, itemId);
     });
   });
 };
@@ -56,32 +67,10 @@ const fillComments = async () => {
 
       console.log(API_PATH);
 
-      const fetchComments = async () => {
-        const fetchedData = await fetch(API_PATH, {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' },
-        })
-          .then((response) => response.json())
-          .catch((error) => error);
-        return fetchedData;
-      };
-
-      const comments = await fetchComments();
-      console.log(comments);
-
+      const comments = await fetchComments(API_PATH);
       const listItems = document.createElement('ul');
       listItems.className = 'comment-items';
-      const getCommentsTag = document.querySelector(`.get-comments-tag-${itemId}`);
-      getCommentsTag.innerHTML = '';
-      console.log(getCommentsTag);
-      comments.forEach((comment) => {
-        listItems.innerHTML += `
-          <li class="each-comment">
-            <span class="item-holder"> <span class="comment-username">${comment.creation_date} ${comment.username}:</span>   ${comment.comment}</span>
-          </li>
-        `;
-      });
-      getCommentsTag.appendChild(listItems);
+      populateComments(comments, itemId, listItems);
     });
   });
 };
@@ -93,3 +82,5 @@ const popupArrange = async () => {
 };
 
 popupArrange();
+
+// refreshButton();

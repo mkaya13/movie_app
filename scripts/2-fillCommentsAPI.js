@@ -14,7 +14,7 @@ const response = fetch(BASE_COMMENTS_API, {
   body: JSON.stringify({
     item_id: '1',
     username: 'Jane',
-    comment: 'Hello I really liked that tv-series',
+    comment: 'Season 1 final was amazing!',
   }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
