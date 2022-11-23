@@ -2,8 +2,8 @@ import { displayMovie } from './createMovie.js';
 import { getMovies } from './getMovies.js';
 
 export const show = async () => {
-  const movies = await getMovies();
-  displayMovie(movies);
+  const movie = await getMovies();
+  displayMovie(movie);
 };
 
 export default { show };

@@ -3,15 +3,16 @@ const moviesContainer = document.getElementById('movie-container');
 export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
   const content = `
       <div class="cards">
-          <div class="one">
+        <div class="one">
           <img src="${movie.image.medium}" alt="">
         </div>
         <div class="movie">
           <p class="movie__name">${movie.name}</p>
           <p class="movie__rating">Rating: ${movie.rating.average}</p>
+          <p><a href="${movie.officialSite}">View Live</a></p>
 
           <div class="popup-section container-md">
-          <button class="view-more button" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> See Project </button>
+          <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details </button>
             <div class="modal" id="myModal-${movie.id}">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -46,9 +47,22 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
                   </div>
 
                   <div class="popup-forth-section modal-header">
-                  <h2> Comments </h2>
-                  <p>...</p>
-                </div>
+                    <h2> Comments </h2>
+                    <div class="get-comments-tag-${movie.id}">
+                    </div>
+                  </div>
+
+                  <div class="popup-fiveth-section modal-header">
+                    <h2> Create a Comment </h2>
+                    <form class="add-comments" id=${movie.id} method="post">
+                      <input id="input-name-${movie.id}" class="form-input" type="text" placeholder="Your Name" value="" required>
+                      <textarea name="user_message" id="input-comments-${movie.id}" class="form-text-area" placeholder="Your Comments" value="" maxlength="500" required></textarea>
+                      <div class="form-submit-buttons">
+                        <button type="submit" class="form-submit-button">Submit</button>
+                        <button class="form-refresh-button">Refresh</button>
+                      <div>
+                    </form>
+                  </div>
 
                 </div>
               <div>
@@ -61,4 +75,5 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
   moviesContainer.insertAdjacentHTML('beforeend', content);
 })
 );
+
 export default { displayMovie };

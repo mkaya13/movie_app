@@ -1,1 +1,6 @@
 modules/createMovie.js
+scripts/1-createCommentsAPIEndpoint.js
+scripts/2-fillCommentsAPI.js
+scripts/3-getRequestCommentsAPI.js
+modules/postComments.js
+src/index.js
