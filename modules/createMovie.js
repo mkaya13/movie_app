@@ -59,9 +59,9 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
                       <textarea name="user_message" id="input-comments-${movie.id}" class="form-text-area" placeholder="Your Comments" value="" maxlength="500" required></textarea>
                       <div class="form-submit-buttons">
                         <button type="submit" class="form-submit-button">Submit</button>
+                        <button class="form-refresh-button" id="form-refresh-${movie.id}">Refresh</button>
                       <div>
                     </form>
-                    <button class="form-refresh-button" id="form-refresh-${movie.id}">Refresh</button>
                   </div>
 
                 </div>
