@@ -4,13 +4,12 @@ import { showComponent } from '../modules/nav.js';
 import { fetchComments, populateComments } from '../modules/fetchComments.js';
 import { getCommentCounts } from '../modules/getCommentCounts.js';
 // import { refreshButton } from '../modules/utils.js';
+import { getLikes } from '../modules/getLikes.js';
+import { applyLike } from '../modules/postRequestLike.js';
 import './style.css';
 
 const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
-const COMMENTS_ENDPOINT_ID = process.env.COMMENTS_ENDPOINT_ID || '';
-
-console.log(BASE_COMMENTS_API);
-console.log(COMMENTS_ENDPOINT_ID);
+const APP_ENDPOINT_ID = process.env.APP_ENDPOINT_ID || '';
 
 let itemId = '';
 
@@ -24,7 +23,7 @@ const sendComments = async () => {
       const inputCommentsTag = document.getElementById(`input-comments-${itemId}`);
 
       const APIEndpoint = BASE_COMMENTS_API.concat(
-        `apps/${COMMENTS_ENDPOINT_ID}/comments`,
+        `apps/${APP_ENDPOINT_ID}/comments`,
       );
 
       await fetch(APIEndpoint, {
@@ -41,17 +40,13 @@ const sendComments = async () => {
         .then((response) => response)
         .catch((error) => error);
 
-      console.log('YEAH!');
-
       inputNameTag.value = '';
       inputCommentsTag.value = '';
 
       const API_PATH = BASE_COMMENTS_API.concat(
-        `apps/${COMMENTS_ENDPOINT_ID}/comments?item_id=${itemId}`,
+        `apps/${APP_ENDPOINT_ID}/comments?item_id=${itemId}`,
       );
       const comments = await fetchComments(API_PATH);
-      console.log(comments);
-      console.log(itemId);
 
       populateComments(comments, itemId);
     });
@@ -59,15 +54,13 @@ const sendComments = async () => {
 };
 
 const fillComments = async () => {
-  console.log('Inside fillComments');
-  console.log(document.querySelectorAll('.view-more'));
   document.querySelectorAll('.view-more').forEach((detailButton) => {
     detailButton.addEventListener('click', async (event) => {
       event.preventDefault();
       const itemId = detailButton.id[detailButton.id.length - 1];
 
       const API_PATH = BASE_COMMENTS_API.concat(
-        `apps/${COMMENTS_ENDPOINT_ID}/comments?item_id=${itemId}`,
+        `apps/${APP_ENDPOINT_ID}/comments?item_id=${itemId}`,
       );
 
       const comments = await fetchComments(API_PATH);
@@ -82,7 +75,11 @@ const arrangeFunctionRuns = async () => {
   await show();
   showComponent();
   await getMovies();
-  await getCommentCounts(BASE_COMMENTS_API, COMMENTS_ENDPOINT_ID);
+  await applyLike();
+
+  const data = await getLikes();
+  console.log(data);
+  await getCommentCounts(BASE_COMMENTS_API, APP_ENDPOINT_ID);
   await fillComments();
   await sendComments();
 };

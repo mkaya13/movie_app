@@ -6,3 +6,5 @@ modules/postComments.js
 src/index.js
 src/style.css
 modules/getCommentCounts.js
+__mocks__/getCommentCountsMock.js
+tests/getCommentCountsMock.test.js
