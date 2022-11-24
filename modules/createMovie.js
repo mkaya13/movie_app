@@ -10,7 +10,7 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
           <p class="movie__name">${movie.name}</p>
           <p class="movie__rating">Rating: ${movie.rating.average}</p>
           <p><a href="${movie.officialSite}">View Live</a></p>
-          <p class="movie__likes">Likes: ${like[index] ? like[index].likes : 0}</p>
+          <p class="movie__likes" id="movie__likes-${movie.id}"><i class="fa-regular fa-heart" id="like-button-${movie.id}" style="cursor:pointer;"></i><span id="like-number-${movie.id}">${like[index] ? like[index].likes : 0}</span></p>
 
           <div class="popup-section container-md">
           <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details and Comments </button>
@@ -77,6 +77,9 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
 `;
 
   moviesContainer.insertAdjacentHTML('beforeend', content);
+
+  const checker = document.querySelector('.movie__likes');
+  console.log(checker.innerText);
 })
 );
 
