@@ -2,12 +2,12 @@ import { getMovies } from '../modules/getMovies.js';
 import { show } from '../modules/movies.js';
 import { showComponent } from '../modules/nav.js';
 import { fetchComments, populateComments } from '../modules/fetchComments.js';
+import { getCommentCounts } from '../modules/getCommentCounts.js';
 // import { refreshButton } from '../modules/utils.js';
 import './style.css';
 
 const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
 const COMMENTS_ENDPOINT_ID = process.env.COMMENTS_ENDPOINT_ID || '';
-
 
 console.log(BASE_COMMENTS_API);
 console.log(COMMENTS_ENDPOINT_ID);
@@ -41,7 +41,7 @@ const sendComments = async () => {
         .then((response) => response)
         .catch((error) => error);
 
-      console.log("YEAH!")
+      console.log('YEAH!');
 
       inputNameTag.value = '';
       inputCommentsTag.value = '';
@@ -59,7 +59,7 @@ const sendComments = async () => {
 };
 
 const fillComments = async () => {
-  console.log("Inside fillComments");
+  console.log('Inside fillComments');
   console.log(document.querySelectorAll('.view-more'));
   document.querySelectorAll('.view-more').forEach((detailButton) => {
     detailButton.addEventListener('click', async (event) => {
@@ -82,6 +82,7 @@ const arrangeFunctionRuns = async () => {
   await show();
   showComponent();
   await getMovies();
+  await getCommentCounts(BASE_COMMENTS_API, COMMENTS_ENDPOINT_ID);
   await fillComments();
   await sendComments();
 };
