@@ -228,6 +228,10 @@ p {
   cursor: pointer;
 }
 
+.favorite-color {
+  color: red;
+}
+
 /* desktop version */
 @media screen and (min-width: 768px) {
   .span-feature {
