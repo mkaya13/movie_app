@@ -8,12 +8,13 @@ import './style.css';
 const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
 const COMMENTS_ENDPOINT_ID = process.env.COMMENTS_ENDPOINT_ID || '';
 
-show();
-showComponent();
+
+console.log(BASE_COMMENTS_API);
+console.log(COMMENTS_ENDPOINT_ID);
 
 let itemId = '';
 
-const grabId = async () => {
+const sendComments = async () => {
   document.querySelectorAll('.add-comments').forEach((button) => {
     button.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -40,6 +41,8 @@ const grabId = async () => {
         .then((response) => response)
         .catch((error) => error);
 
+      console.log("YEAH!")
+
       inputNameTag.value = '';
       inputCommentsTag.value = '';
 
@@ -56,6 +59,8 @@ const grabId = async () => {
 };
 
 const fillComments = async () => {
+  console.log("Inside fillComments");
+  console.log(document.querySelectorAll('.view-more'));
   document.querySelectorAll('.view-more').forEach((detailButton) => {
     detailButton.addEventListener('click', async (event) => {
       event.preventDefault();
@@ -65,8 +70,6 @@ const fillComments = async () => {
         `apps/${COMMENTS_ENDPOINT_ID}/comments?item_id=${itemId}`,
       );
 
-      console.log(API_PATH);
-
       const comments = await fetchComments(API_PATH);
       const listItems = document.createElement('ul');
       listItems.className = 'comment-items';
@@ -75,12 +78,14 @@ const fillComments = async () => {
   });
 };
 
-const popupArrange = async () => {
+const arrangeFunctionRuns = async () => {
+  await show();
+  showComponent();
   await getMovies();
   await fillComments();
-  await grabId();
+  await sendComments();
 };
 
-popupArrange();
+arrangeFunctionRuns();
 
 // refreshButton();
