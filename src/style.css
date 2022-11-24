@@ -224,6 +224,10 @@ p {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
+.favorite {
+  cursor: pointer;
+}
+
 /* desktop version */
 @media screen and (min-width: 768px) {
   .span-feature {

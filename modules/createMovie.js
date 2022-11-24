@@ -8,7 +8,9 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
         </div>
         <div class="movie">
           <p class="movie__name">${movie.name}</p>
-          <p class="movie__likes">Likes: ${like[index] ? like[index].likes : 0}</p>
+          <p class="movie__likes"><span class="material-symbols-outlined favorite" id="like-btn">
+          favorite
+          </span> <span id="like-count"> ${like[index] ? like[index].likes : 0}</span></p>
 
           <div class="popup-section container-md">
           <button class="view-more button" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> See Project </button>
@@ -61,4 +63,5 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
   moviesContainer.insertAdjacentHTML('beforeend', content);
 })
 );
+
 export default { displayMovie };
