@@ -1,8 +1,9 @@
 const moviesContainer = document.getElementById('movie-container');
 
-export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movie, index) => {
-  const content = `
-      <div class="cards">
+moviesContainer.innerHTML = '';
+const generateMovies = ((movies, like) => movies.slice(0, 20).map((movie, index) => `
+<div class="movie-container">
+<div class="cards">
           <div class="one">
           <img src="${movie.image.medium}" alt="">
         </div>
@@ -58,10 +59,12 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
           </div>
         </div>
       </div>
-`;
-
-  moviesContainer.insertAdjacentHTML('beforeend', content);
-})
+<div>
+`)
 );
+
+export const displayMovie = (movies, likes) => {
+  moviesContainer.innerHTML = generateMovies(movies, likes);
+};
 
 export default { displayMovie };

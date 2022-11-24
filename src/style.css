@@ -55,16 +55,20 @@ p {
   background-color: rgb(228, 228, 228);
 }
 
-.cards {
+/* .cards {
   flex: 1;
   margin-bottom: 30px;
-}
+} */
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   gap: 3px;
+}
+
+
+.flexx {
+  display: flex;
 }
 
 .one img {
@@ -83,13 +87,13 @@ p {
   padding: 2.5rem 0;
 }
 
-.movie__likes {
+/* .movie__likes {
   padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 13px;
-}
+} */
 
 .header-content__title {
   font-size: 3.9vw;
@@ -136,11 +140,12 @@ p {
   margin-top: 3rem;
 }
 
-.visible {
-  display: flex !important;
-}
+/* .visible {
+  display: block !important;
+} */
 
-#movie-section,
+/* #movie-section, */
+
 #episode-section,
 #contact-section {
   display: none;

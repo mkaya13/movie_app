@@ -1,4 +1,6 @@
+import { displayMovie } from './createMovie.js';
 import { getLikes } from './getLikes.js';
+import { getMovies } from './getMovies.js';
 
 const APIUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/nmfrG36tREDV4HGApbkk/likes';
 
@@ -14,16 +16,14 @@ export const counter = () => {
   const likeBtn = document.querySelectorAll('.favorite');
   likeBtn.forEach((btn, index, itemId) => {
     btn.addEventListener('click', async () => {
-      if (itemId) {
-        btn.classList.toggle('favorite-color');
-      }
       const data = await getLikes();
       itemId = data[index].item_id;
-      const likesCount = data[index].likes;
-      if (likesCount) {
-        createLike(itemId);
-        getLikes();
-      }
+
+      await createLike(itemId);
+      const likes = await getLikes();
+      const movies = await getMovies();
+      displayMovie(movies, likes);
+      counter();
     });
   });
 };
