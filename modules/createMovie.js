@@ -3,21 +3,23 @@ const moviesContainer = document.getElementById('movie-container');
 export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movie, index) => {
   const content = `
       <div class="cards">
-          <div class="one">
+        <div class="one">
           <img src="${movie.image.medium}" alt="">
         </div>
         <div class="movie">
           <p class="movie__name">${movie.name}</p>
+          <p class="movie__rating">Rating: ${movie.rating.average}</p>
+          <p><a href="${movie.officialSite}">View Live</a></p>
           <p class="movie__likes">Likes: ${like[index] ? like[index].likes : 0}</p>
 
           <div class="popup-section container-md">
-          <button class="view-more button" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> See Project </button>
+          <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details and Comments </button>
             <div class="modal" id="myModal-${movie.id}">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                   <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
                   </div>
 
                   <div class="popup-first-section modal-header">
@@ -46,9 +48,25 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
                   </div>
 
                   <div class="popup-forth-section modal-header">
-                  <h2> Comments </h2>
-                  <p>...</p>
-                </div>
+                    <div class="comments-title">
+                      <h2> Comments </h2>
+                      <span class="comment-count-${movie.id}">(0)</span>
+                    </div>
+                    <div class="get-comments-tag-${movie.id}">
+                    </div>
+                  </div>
+
+                  <div class="popup-fiveth-section modal-header">
+                    <h2> Create a Comment </h2>
+                    <form class="add-comments" id=${movie.id} method="post">
+                      <input id="input-name-${movie.id}" class="form-input" type="text" placeholder="Your Name" value="" required>
+                      <textarea name="user_message" id="input-comments-${movie.id}" class="form-text-area" placeholder="Your Comments" value="" maxlength="500" required></textarea>
+                      <div class="form-submit-buttons">
+                        <button type="submit" class="form-submit-button">Submit</button>
+                        <button class="form-refresh-button" id="form-refresh-${movie.id}">Refresh</button>
+                      <div>
+                    </form>
+                  </div>
 
                 </div>
               <div>
@@ -61,4 +79,5 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
   moviesContainer.insertAdjacentHTML('beforeend', content);
 })
 );
+
 export default { displayMovie };

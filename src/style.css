@@ -28,7 +28,15 @@ p {
   color: orange;
   cursor: pointer;
   font-size: 28px;
-  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  text-shadow:
+    1px 0 0 #fff,
+    -1px 0 0 #fff,
+    0 1px 0 #fff,
+    0 -1px 0 #fff,
+    1px 1px #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff;
 }
 
 .nav-items {
@@ -214,10 +222,72 @@ p {
   text-align: center;
 }
 
-.popup-forth-section {
+.popup-fiveth-section {
   display: flex;
   flex-direction: column;
   gap: 0.2rem 0;
+}
+
+.add-comments {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 2rem 0;
+  margin-top: 1rem;
+}
+
+.form-input {
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.form-text-area {
+  height: 5rem;
+  padding: 0.5rem;
+}
+
+.form-submit-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-left: 1.5rem;
+}
+
+.form-submit-button {
+  width: 5rem;
+  padding: 0.25rem;
+}
+
+.form-refresh-button {
+  width: 5rem;
+  padding: 0.25rem;
+}
+
+.popup-forth-section {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.25rem 0;
+}
+
+.comment-username {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.comment-items {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.25rem 0;
+}
+
+.comments-title {
+  display: flex;
 }
 
 .material-symbols-outlined {
@@ -245,6 +315,7 @@ p {
 
   .hide-menu {
     display: block;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
   }
 
   .popup-second-section {
