@@ -44,7 +44,7 @@ p {
   color: #d3d3d3;
 }
 
-.material-symbols-outlined {
+.hide-menu {
   display: none;
 }
 
@@ -76,7 +76,7 @@ p {
 }
 
 .one img {
-  width: 240px;
+  width: 220px;
   padding-bottom: 10px;
 }
 
@@ -91,8 +91,12 @@ p {
   padding: 2.5rem 0;
 }
 
-.movie__rating {
+.movie__likes {
   padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
 }
 
 .header-content__title {
@@ -284,6 +288,8 @@ p {
 
 .comments-title {
   display: flex;
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 /* desktop version */
@@ -305,7 +311,7 @@ p {
     display: none;
   }
 
-  .material-symbols-outlined {
+  .hide-menu {
     display: block;
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
   }

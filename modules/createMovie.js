@@ -1,6 +1,6 @@
 const moviesContainer = document.getElementById('movie-container');
 
-export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => {
+export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movie, index) => {
   const content = `
       <div class="cards">
         <div class="one">
@@ -10,6 +10,7 @@ export const displayMovie = ((movies) => movies.slice(0, 20).forEach((movie) => 
           <p class="movie__name">${movie.name}</p>
           <p class="movie__rating">Rating: ${movie.rating.average}</p>
           <p><a href="${movie.officialSite}">View Live</a></p>
+          <p class="movie__likes">Likes: ${like[index] ? like[index].likes : 0}</p>
 
           <div class="popup-section container-md">
           <button class="view-more" id="details-${movie.id}" type="button" data-bs-toggle="modal" data-bs-target="#myModal-${movie.id}"> Details and Comments </button>
