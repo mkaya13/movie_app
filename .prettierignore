@@ -5,3 +5,4 @@ scripts/3-getRequestCommentsAPI.js
 modules/postComments.js
 src/index.js
 src/style.css
+modules/getCommentCounts.js
