@@ -3,18 +3,15 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-let BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
+const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
 const APP_ENDPOINT_ID = process.env.APP_ENDPOINT_ID || '';
-BASE_COMMENTS_API = BASE_COMMENTS_API.concat(
-  `apps/${APP_ENDPOINT_ID}/comments`,
-);
 
-const response = fetch(BASE_COMMENTS_API, {
+const API_PATH = BASE_COMMENTS_API.concat(`apps/${APP_ENDPOINT_ID}/likes`);
+
+const postLikeResponse = fetch(API_PATH, {
   method: 'POST',
   body: JSON.stringify({
-    item_id: '1',
-    username: 'Jane',
-    comment: 'Season 1 final was amazing!',
+    item_id: '2',
   }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
@@ -23,5 +20,5 @@ const response = fetch(BASE_COMMENTS_API, {
   .then((response) => response)
   .catch((error) => console.log(error));
 
-const data = await response;
+const data = await postLikeResponse;
 console.log(data);

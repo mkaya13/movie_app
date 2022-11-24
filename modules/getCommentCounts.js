@@ -2,7 +2,7 @@ import { fetchComments } from './fetchComments.js';
 
 export const getCommentCounts = async (
   BASE_COMMENTS_API,
-  COMMENTS_ENDPOINT_ID,
+  APP_ENDPOINT_ID,
 ) => {
   await fetchComments();
 
@@ -11,7 +11,7 @@ export const getCommentCounts = async (
       const itemId = button.id[button.id.length - 1];
 
       const API_PATH = BASE_COMMENTS_API.concat(
-        `apps/${COMMENTS_ENDPOINT_ID}/comments?item_id=${itemId}`,
+        `apps/${APP_ENDPOINT_ID}/comments?item_id=${itemId}`,
       );
 
       const comments = await fetchComments(API_PATH);

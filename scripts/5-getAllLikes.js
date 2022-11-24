@@ -6,11 +6,9 @@ dotenv.config();
 const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API || '';
 const APP_ENDPOINT_ID = process.env.APP_ENDPOINT_ID || '';
 
-const API_PATH = BASE_COMMENTS_API.concat(
-  `apps/${APP_ENDPOINT_ID}/comments?item_id=1`,
-);
+const API_PATH = BASE_COMMENTS_API.concat(`apps/${APP_ENDPOINT_ID}/likes`);
 
-const fetchData = async () => {
+const fetchLikesData = async () => {
   const fetchedData = fetch(API_PATH, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
@@ -21,9 +19,9 @@ const fetchData = async () => {
   return fetchedData;
 };
 
-const returnScoreData = async () => {
-  const responseData = await fetchData();
+const returnLikesData = async () => {
+  const responseData = await fetchLikesData();
   console.log(responseData);
 };
 
-returnScoreData();
+returnLikesData();
