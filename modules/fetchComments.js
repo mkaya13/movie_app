@@ -13,7 +13,6 @@ export const populateComments = (comments, itemId) => {
   getCommentsTag.innerHTML = '';
   const listItems = document.createElement('ul');
   listItems.className = 'comment-items';
-  console.log(getCommentsTag);
   comments.forEach((comment) => {
     listItems.innerHTML += `
         <li class="each-comment">
@@ -22,9 +21,6 @@ export const populateComments = (comments, itemId) => {
       `;
   });
   getCommentsTag.appendChild(listItems);
-  console.log(listItems);
-  console.log('did it!');
-  console.log('Comments count:', comments.length);
   const commentTag = document.querySelector(`.comment-count-${itemId}`);
   commentTag.innerHTML = `(${comments.length})`;
 };

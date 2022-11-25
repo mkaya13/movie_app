@@ -77,9 +77,6 @@ export const displayMovie = ((movies, like) => movies.slice(0, 20).forEach((movi
 `;
 
   moviesContainer.insertAdjacentHTML('beforeend', content);
-
-  const checker = document.querySelector('.movie__likes');
-  console.log(checker.innerText);
 })
 );
 

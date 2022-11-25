@@ -9,8 +9,8 @@ export const postRequestLike = async (itemId) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-    .then((response) => console.log(response))
-    .catch((error) => console.log(error));
+    .then((response) => response)
+    .catch((error) => error);
 };
 export const applyLike = async () => {
   document.querySelectorAll('.fa-regular,.fa-heart').forEach((likeButton) => {
