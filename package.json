@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "start": "WATCHPACK_POLLING=true webpack serve --open",
+    "start": "webpack serve --open",
     "build": "webpack",
     "test": "jest"
   },
