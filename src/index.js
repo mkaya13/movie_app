@@ -76,9 +76,7 @@ const arrangeFunctionRuns = async () => {
   showComponent();
   await getMovies();
   await applyLike();
-
-  const data = await getLikes();
-  console.log(data);
+  await getLikes();
   await getCommentCounts(BASE_COMMENTS_API, APP_ENDPOINT_ID);
   await fillComments();
   await sendComments();
