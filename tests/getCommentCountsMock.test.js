@@ -10,12 +10,12 @@ describe('Tests fetch with axios', () => {
   const sixthItemCommentCount = 1;
   const fivethItemCommentsFirstObject = {
     username: 'Seko',
-    creation_date: '2022-11-24',
+    creation_date: '2022-11-25',
     comment: 'Perfect man!',
   };
   const fivethItemCommentsSecondObject = {
     username: 'Mert',
-    creation_date: '2022-11-24',
+    creation_date: '2022-11-25',
     comment: 'Yes man!',
   };
   it('Comment Counts Testing item 5', async () => {
