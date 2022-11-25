@@ -99,6 +99,7 @@
 - [ ] Add a filtering future with respect to movie genres.
 - [ ] Sort the movies with respect to their IMDB rating.
 - [ ] Add show more button so that users can see more movies in the front end.
+- [ ] Add comments edit check
 
 ## 🤝 Contributing
 
