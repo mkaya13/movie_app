@@ -104,7 +104,7 @@
 
 - Contributions, issues, and feature requests are welcome!
 
-- Feel free to check the [issues page](https://github.com/mkaya13/movie_app/issues).
+- Feel free to check the [issues page](https://github.com/mkaya13/movie_app/issues)
 
 ## Show your support
 
