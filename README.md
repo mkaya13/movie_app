@@ -43,6 +43,10 @@
 - `npm run build`
 - `npm start`
 
+## Link to Kanban board
+
+- [Click here](https://github.com/mkaya13/movie_app/projects/2)
+
 ## Install Linters
 
 - `npm install hint@7.x stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x --save-dev`
