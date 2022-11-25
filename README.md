@@ -1,4 +1,4 @@
-## 📖 Movie App Project
+## 📖 Amazin Movies
 
 - A platform for movies/TV shows, where users can like, look at the details and comments on their favourite movie shows. Furthermore, users are able to see other detailed information such as imdb rating, duration of the shows, genres, language, etc of the movies.
 
