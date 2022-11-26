@@ -3,11 +3,15 @@ import { getCommentsMock } from '../__mocks__/getCommentsMock.js';
 
 describe('Tests fetch with axios', () => {
   const { BASE_COMMENTS_API, COMMENTS_ENDPOINT_ID } = jestAPICredentials;
-  const endpoint = BASE_COMMENTS_API.concat('apps/', COMMENTS_ENDPOINT_ID, '/comments?');
+  const endpoint = BASE_COMMENTS_API.concat(
+    'apps/',
+    COMMENTS_ENDPOINT_ID,
+    '/comments?'
+  );
   const API_PATH_ITEM_5 = endpoint.concat('item_id=5');
   const API_PATH_ITEM_6 = endpoint.concat('item_id=6');
   const fivethItemCommentCount = 2;
-  const sixthItemCommentCount = 1;
+  const sixthItemCommentCount = 2;
   const fivethItemCommentsFirstObject = {
     username: 'Seko',
     creation_date: '2022-11-25',
