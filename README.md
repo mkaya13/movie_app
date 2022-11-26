@@ -1,12 +1,44 @@
-## 📖 Amazin Movies
+<a name="readme-top"></a>
 
-- A platform for movies/TV shows, where users can like, look at the details and comments on their favourite movie shows. Furthermore, users are able to see other detailed information such as imdb rating, duration of the shows, genres, language, etc of the movies.
+<div align="center">
 
-## 🚀 Live Demo
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-[Click here for live demo](https://mkaya13.github.io/movie_app/dist/index.html)
+  <h3><b>Microverse README Template</b></h3>
 
-## 🛠 Built With
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Amazing Movies <a name="about-project"></a>
+
+> A platform for movies/TV shows, where users can like, look at the details and comments on their favourite movie shows. Furthermore, users are able to see other detailed information such as imdb rating, duration of the shows, genres, language, etc of the movies.
+
+## 🛠 Built With <a name="built-with"></a>
 
 - HTML
 
@@ -16,74 +48,112 @@
 
 - APIs
 
-## Summary of Tasks
+### Tech Stack <a name="tech-stack"></a>
 
-- Add `scripts` folder which runs node.js files for creating corresponding API endpoints with post requests, and checks the API endpoints with get request to test whether they hold data or not.
+> Describe the tech stack and include only the relevant sections that apply to your project.
 
-- `modules` folder are responsible for holding the javascript functions for website operations such as implementing comments, likes, popup, etc functionalities.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript (ES6/ES7..)</a></li>
+    <li><a href="https://webpack.js.org/">webpack</a></li>
+  </ul>
+</details>
 
-- `dist` folder is the output of the webpack that will be used to compile our code inside `src` so that we can compile and use every single libraries that we are working.
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.themoviedb.org/">themoviedb API</a></li>
+  </ul>
+</details>
 
-- `webpack.config.js` is the config file for webpack.
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-- Inside our `src` code we have `index.html` that is the base file for our HTML code, `index.js` that is the base file for js codes and `style.css` is responsible for whole styling.
+### Key Features <a name="key-features"></a>
 
-- We have linters file for checking html, css and javascript syntax.
+- **Popup Menu**
+- **Show likes**
+- **Shows and Sends comments to a server**
+- **Display movies and their details with API calls**
 
-- `__mocks__` and `tests` are responsible for applying unity and integration tests.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- We also store API credentials data but we hide them.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-## 💻 SETUP PROJECT
+- [Click here for live demo](https://mkaya13.github.io/movie_app/dist/index.html)
 
-- `npm install` --> For uploading all the necessary packages.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Run Webpack
+## 💻 Getting Started <a name="getting-started"></a>
 
-- `npm run build`
-- `npm start`
+> npm install --> For uploading all the necessary packages.
 
-## Link to Kanban board
+> npm start --> For running webpack in local server
 
-- [Click here](https://github.com/mkaya13/movie_app/projects/2)
+> npm run build --> Compiling src folder into dist folder with webpack
 
-## Install Linters
+> npm test --> For running jest tests
 
-- `npm install hint@7.x stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x --save-dev`
+> node scripts/1-createCommentsAPIEndpoint.js (Add "type" = "module" and run node.js files in scripts folder.)
 
-- configure `.hintrc`
+### Prerequisites
 
-- configure `.styleintrc.json`
+> In order to run this project you need:
 
-- configure `.eslintrc.json`
+- GitHub flow
+- Gitflow
+- HTML and CSS
+- JAVASCRIPT (ES6/...)
+- Webpack
+- npm
+- node.js
+- Any code editer (vs code)
 
-## Run Linters
+### Setup
 
-- `npx hint .`
-- `npx stylelint "**/*.{css,scss}"`
-- `npx eslint .`
+> Clone this repository to your desired folder:
 
-## Environment Variables
+- `git clone https://github.com/mkaya13/movie_app.git`
 
-- Create an .env file in home path and add the necessary credentials for the project. (And hide it!)
+### Install
 
-## Node Modules
+> Install this project with:
 
-- Add `"type": "module"` inside package.json
+- `npm install`
+- Set up `.env` file for API credentials.
 
-- Run `1-createCommentsAPIEndpoint.js` to create app ID for the API endpoint that we will use for storing data.
+### Usage
 
-  Then add the appId which comes from step 1 as a response to inside `.env` file.
+> To run the project, execute the following command:
 
-- Run `scripts/2-fillCommentsAPI.js` which sends a post request to add a comment for item 1 inside API endpoint that is responsible for storing API data.
+- Add `"type":"module"` inside package.json and run scripts folder from 1 to 5 to set up API endpoints
+- Run `npm start` to run app in local server with webpack
+- Run `npm run build` to compile source codes into dist folder with webpack.
 
-- Run `3-getRequestCommentsAPI.js` sends a get request for retrieving the stored comments data for corresponding item.
+### Run tests
 
-- Run `4-postRequestForLikes.js` sends a post request for adding a like inside like API endpoint for storing data.
+- Run `npm test` to run jest tests.
 
-- Run `5-getAllLikes.js` sends a get request to retrieve data stored for all items.
+### Deployment
 
-## 👥 Authors
+> You can deploy this project using:
+
+> npm run deploy - Deploys using gh-pages
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+> Mention all of the collaborators of this project.
 
 👤 Mert Kaya
 
@@ -97,7 +167,11 @@
 - Twitter: [@SekoViper](https://twitter.com/SekoViper)
 - LinkedIn: [@livingstone-dameh](https://www.linkedin.com/in/livingstone-dameh-b755a5151/)
 
-## 🔭 Future Features
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Improve user experience and interface design.
 - [ ] Add a filtering future with respect to movie genres.
@@ -105,16 +179,32 @@
 - [ ] Add show more button so that users can see more movies in the front end.
 - [ ] Add comments edit check
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Contributions, issues, and feature requests are welcome!
+<!-- CONTRIBUTING -->
 
-- Feel free to check the [issues page](https://github.com/mkaya13/movie_app/issues).
+## 🤝 Contributing <a name="contributing"></a>
 
-## Show your support
+> Contributions, issues, and feature requests are welcome!
 
-- Give a ⭐️ if you like this project!
+> Feel free to check the [issues page](https://github.com/mkaya13/movie_app/issues).
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- This project is [MIT](./LICENSE) licensed.
+## ⭐️ Show your support <a name="support"></a>
+
+> Feel free to send a like to the project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> I would like to thank Microverse team for their efforts!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+> This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
