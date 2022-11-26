@@ -1,6 +1,6 @@
-## 📖 Movie App Project
+## 📖 Amazin Movies
 
-- A platform for movies/TV shows, where users can like, look at the details and comments on their favourite movie shows. Furthermore, users are able to see other detailed information such as imdb rating, duration, genres, duration, etc of the movies.
+- A platform for movies/TV shows, where users can like, look at the details and comments on their favourite movie shows. Furthermore, users are able to see other detailed information such as imdb rating, duration of the shows, genres, language, etc of the movies.
 
 ## 🚀 Live Demo
 
@@ -42,6 +42,10 @@
 
 - `npm run build`
 - `npm start`
+
+## Link to Kanban board
+
+- [Click here](https://github.com/mkaya13/movie_app/projects/2)
 
 ## Install Linters
 
@@ -99,6 +103,7 @@
 - [ ] Add a filtering future with respect to movie genres.
 - [ ] Sort the movies with respect to their IMDB rating.
 - [ ] Add show more button so that users can see more movies in the front end.
+- [ ] Add comments edit check
 
 ## 🤝 Contributing
 
