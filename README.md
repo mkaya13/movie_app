@@ -93,15 +93,15 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> npm install --> For uploading all the necessary packages.
+- npm install --> For uploading all the necessary packages.
 
-> npm start --> For running webpack in local server
+- npm start --> For running webpack in local server
 
-> npm run build --> Compiling src folder into dist folder with webpack
+- npm run build --> Compiling src folder into dist folder with webpack
 
-> npm test --> For running jest tests
+- npm test --> For running jest tests
 
-> node scripts/1-createCommentsAPIEndpoint.js (Add "type" = "module" and run node.js files in scripts folder.)
+- node scripts/1-createCommentsAPIEndpoint.js (Add "type" = "module" and run node.js files in scripts folder.)
 
 ### Prerequisites
 
