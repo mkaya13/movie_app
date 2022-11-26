@@ -9,5 +9,5 @@ const response = await fetch(BASE_COMMENTS_API.concat('apps/'), {
   method: 'POST',
 });
 
-const data = await response.json();
+const data = await response.text();
 console.log(data);

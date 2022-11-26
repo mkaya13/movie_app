@@ -7,15 +7,15 @@ describe('Tests fetch with axios', () => {
   const API_PATH_ITEM_5 = endpoint.concat('item_id=5');
   const API_PATH_ITEM_6 = endpoint.concat('item_id=6');
   const fivethItemCommentCount = 2;
-  const sixthItemCommentCount = 1;
+  const sixthItemCommentCount = 2;
   const fivethItemCommentsFirstObject = {
     username: 'Seko',
-    creation_date: '2022-11-24',
+    creation_date: '2022-11-25',
     comment: 'Perfect man!',
   };
   const fivethItemCommentsSecondObject = {
     username: 'Mert',
-    creation_date: '2022-11-24',
+    creation_date: '2022-11-25',
     comment: 'Yes man!',
   };
   it('Comment Counts Testing item 5', async () => {
