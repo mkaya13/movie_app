@@ -1,9 +1,9 @@
 import { getCommentsMock } from '../__mocks__/getCommentsMock.js';
 
 describe('Tests fetch with axios', () => {
-  const BASE_COMMENTS_API = process.env.BASE_COMMENTS_API;
+  const BASE_COMMENTS_API_ENDPOINT = process.env.BASE_COMMENTS_API;
   const COMMENTS_ENDPOINT_ID = process.env.APP_ENDPOINT_ID;
-  const endpoint = BASE_COMMENTS_API.concat(
+  const endpoint = BASE_COMMENTS_API_ENDPOINT.concat(
     'apps/',
     COMMENTS_ENDPOINT_ID,
     '/comments?',
