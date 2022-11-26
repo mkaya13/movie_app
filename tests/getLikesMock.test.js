@@ -1,10 +1,8 @@
-import { jestAPICredentials } from '../__mocks__/jestAPICredentials.js';
 import { getLikesMock } from '../__mocks__/getLikesMock.js';
 
 // arrange
 describe('Tests fetch with axios', () => {
-  const { LIKES_ENDPOINT_API } = jestAPICredentials;
-  const endpoint = LIKES_ENDPOINT_API;
+  const endpoint = process.env.LIKES_API_PATH;
 
   it('Grabs Likes Count', async () => {
     const likesData = await getLikesMock(endpoint);

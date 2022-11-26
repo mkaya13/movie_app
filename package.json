@@ -7,7 +7,7 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "jest"
+    "test": "node -r dotenv/config $(which jest) --watchAll"
   },
   "repository": {
     "type": "git",
