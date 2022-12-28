@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "start": "webpack serve --open",
+    "start": "WATCHPACK_POLLING=true webpack serve --open",
     "build": "webpack",
     "test": "node -r dotenv/config $(which jest) --watchAll"
   },

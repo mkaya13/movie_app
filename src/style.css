@@ -54,13 +54,14 @@ p {
 }
 
 .footer {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   margin-top: 30px;
   padding: 35px;
-  background-color: rgb(228, 228, 228);
+  background-color: #9400d3;
 }
 
 .cards {
@@ -294,6 +295,46 @@ p {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
+.view-more {
+  color: white;
+  padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: black;
+}
+
+.view-more:hover {
+  background-color: white;
+  color: black;
+}
+
+.show-more {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+  padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #4169e1;
+}
+
+.show-more:hover {
+  background-color: white;
+  color: black;
+}
+
+.bottom-arrow {
+  width: 10px;
+  height: 10px;
+  transition: 0.5s;
+  float: right;
+  box-shadow: -2px 2px 0 #ec5242;
+  transform: rotate(-45deg);
+  margin-bottom: 7%;
+  margin-left: 10px;
+}
+
 /* desktop version */
 @media screen and (min-width: 768px) {
   .span-feature {
@@ -314,7 +355,7 @@ p {
   }
 
   .hide-menu {
-    display: block;
+    display: none;
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
   }
 
