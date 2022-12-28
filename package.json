@@ -1,0 +1,54 @@
+{
+  "name": "movie_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "WATCHPACK_POLLING=true webpack serve --open",
+    "build": "webpack",
+    "test": "node -r dotenv/config $(which jest) --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkaya13/movie_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkaya13/movie_app/issues"
+  },
+  "homepage": "https://github.com/mkaya13/movie_app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.0",
+    "webpack": "^5.75.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "axios": "^1.2.0",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.7.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "file-loader": "^6.2.0",
+    "fs": "^0.0.1-security",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.3.0",
+    "jest-fetch-mock": "^3.0.3",
+    "luxon": "^3.1.0",
+    "node-fetch": "^3.3.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
